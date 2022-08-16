@@ -1,4 +1,5 @@
 import type { NextPage } from 'next'
+import Link from 'next/link'
 
 // Components | Buttons
 import GoogleLoginBtn from '../Buttons/GoogleLogin'
@@ -75,7 +76,9 @@ const Login: NextPage = () => {
                     Login
                 </button>
 
-                <a className='underline text-white'>Register Here</a>
+                <Link href="/register">
+                    <a className='underline text-white'>Register Here</a>
+                </Link>
 
                 <div className="grid grid-cols-2 768max:grid-cols-1 m-auto">
                     <GoogleLoginBtn />
@@ -84,7 +87,7 @@ const Login: NextPage = () => {
                     <AppleLoginBtn />
                 </div>
             </form>
-        </div>
+        </div >
     )
 }
 
