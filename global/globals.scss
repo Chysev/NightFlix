@@ -1,0 +1,90 @@
+/* Tailwind */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* GLOBAL CSS */
+
+/* FONT SETTINGS */
+
+h1,
+h2,
+h3,
+a,
+p,
+span,
+li,
+img,
+Image {
+  -webkit-user-drag: none;
+}
+
+h2,
+a,
+p,
+span {
+  text-align: justify;
+}
+
+/* Custom ScrollBar */
+/* ::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: rgb(221, 221, 221);
+}
+::-webkit-scrollbar-thumb {
+  background: #06ab7f;
+  border-radius: 12px;
+} */
+
+.max-width {
+  max-width: 1300px;
+  padding: 0 80x;
+  margin: auto;
+}
+
+.max-height {
+  max-height: 100vh;
+}
+
+.Login {
+  background-image: url("../public/Login.png");
+}
+
+form {
+  padding: 70px 40px;
+  background-color: steelblue;
+  background: hsl(0 0% 90% / 0.1);
+  backdrop-filter: blur(0.7rem);
+  @media (max-width: 768px) {
+    background-color: transparent;
+    background: none;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+input {
+  background-color: whitesmoke;
+}
+
+/* Global Media Query */
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after,
+  *:active,
+  *:hover {
+    animation-duration: 140ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 140ms !important;
+    scroll-behavior: auto !important;
+  }
+}
