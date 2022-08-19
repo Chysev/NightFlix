@@ -1,8 +1,6 @@
-import type { NextPage } from 'next'
-
 import UserIcon from './UserIcon'
 
-const Navigation: NextPage = () => {
+const Navigation = () => {
     return (
         <div className="
         fixed
@@ -13,10 +11,11 @@ const Navigation: NextPage = () => {
             <div className='
             flex
             max-width-1500
+            justify-between
             items-center
             '
                 style={{
-                    width: "1500px",
+
                     padding: "15px",
                     height: "80px"
                 }}>

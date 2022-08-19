@@ -1,0 +1,8 @@
+.rounded_full {
+    height: 55px;
+    width: 55px;
+    @media (max-width: 1130px) {
+        height: 45px;
+        width: 45px;
+    } 
+}

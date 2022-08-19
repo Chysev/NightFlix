@@ -1,7 +1,6 @@
-import type { NextPage } from 'next'
 import { signIn } from "next-auth/react"
 
-const GitHubLogin: NextPage = () => {
+const GitHubLogin = () => {
     return (
         <button onClick={() => {
             signIn('github', {

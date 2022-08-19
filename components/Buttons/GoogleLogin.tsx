@@ -1,7 +1,6 @@
-import type { NextPage } from 'next'
 import { signIn } from "next-auth/react"
 
-const GoogleLogin: NextPage = () => {
+const GoogleLogin = () => {
     return (
         <button onClick={() => {
             signIn('google', {

@@ -1,6 +1,4 @@
-import type { NextPage } from 'next'
-
-const FooterNavigation: NextPage = () => {
+const FooterNavigation = () => {
     return (
         <div className='
         grid

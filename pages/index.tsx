@@ -1,4 +1,3 @@
-import type { NextPage } from 'next'
 import { useSession, signIn, signOut } from "next-auth/react"
 import { useRouter } from 'next/router'
 
@@ -8,7 +7,7 @@ import Login from '../components/Main/Login'
 
 // Login and Redirect || Redirect the User if its already logged in
 
-const Home: NextPage = () => {
+const Home = () => {
 
   // For the session
   const { data: session } = useSession()
@@ -17,10 +16,10 @@ const Home: NextPage = () => {
 
   if (session) {
     setTimeout(() => {
-      push("/dashboard")
-    }, 3000)
+      push("/Dashboard")
+    }, 2000)
     return (
-      <div>Redirecting you to the Dashboard in 3 seconds..</div>
+      <div style={{ backgroundColor: "#0e1630", height: "100vh", width: "100%", display: "fixed" }} />
     )
   }
 

@@ -1,5 +1,4 @@
-import type { NextPage } from 'next'
-import { useSession, signIn, signOut } from "next-auth/react"
+import { useSession } from "next-auth/react"
 import { useRouter } from 'next/router'
 
 // Components
@@ -8,7 +7,7 @@ import Search from '../components/Dashboard/Search'
 import MainPage from '../components/Dashboard/MainPage'
 import FooterNavigation from '../components/Dashboard/FooterNavigation'
 
-const dashboard: NextPage = () => {
+const Dashboard = () => {
     // For the session
     const { data: session } = useSession()
 
@@ -16,33 +15,35 @@ const dashboard: NextPage = () => {
     const { push } = useRouter()
 
     if (session) {
-        <div className=''>
+        return (
+            <div className=''>
 
-            <div className="hidden 1130max:block">
-                <Search />
-            </div>
+                <div className="hidden 1130max:block">
+                    <Search />
+                </div>
 
-            <div className='block 1130max:hidden'>
-                <Navigation />
-            </div>
+                <div className='block 1130max:hidden'>
+                    <Navigation />
+                </div>
 
-            <div>
-                <MainPage />
-            </div>
+                <div>
+                    <MainPage />
+                </div>
 
-            <div className='hidden 1130max:block'>
-                <FooterNavigation />
+                <div className='hidden 1130max:block'>
+                    <FooterNavigation />
+                </div>
             </div>
-        </div>
+        )
     }
 
     setTimeout(() => {
         push("/")
-    }, 3000)
+    }, 2000)
     return (
-        <div></div>
+        <div style={{ backgroundColor: "#0e1630", height: "100vh", width: "100%", display: "fixed" }} />
     )
 }
 
 
-export default dashboard
+export default Dashboard

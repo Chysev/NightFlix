@@ -1,6 +1,6 @@
-import type { NextPage } from 'next'
+import Vidoes from "./Videos"
 
-const MainPage: NextPage = () => {
+const MainPage = () => {
     return (
         /* Parent Div */
         <div className="
@@ -13,17 +13,17 @@ const MainPage: NextPage = () => {
             {/* Children Div */}
 
             <div className="
-            grid 
+            flex
             min-height 
             max-width 
+            m-auto
             justify-center"
                 style={{
                     width: "1280px",
-                    height: "100vh"
                 }}>
 
                 {/* Video Starts Here */}
-
+                <Vidoes />
             </div>
         </div>
     )

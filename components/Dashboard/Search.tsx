@@ -20,7 +20,7 @@ const Search = () => {
                 </div>
 
 
-                <div>
+                <div className="flex items-center gap-4">
                     <i className="mr-2 ml-2 fa-solid fa-bell text-xl"></i>
                     <i className="mr-2 ml-2 fa-solid fa-magnifying-glass text-xl"></i>
                     <UserIcon />

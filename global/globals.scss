@@ -28,7 +28,7 @@ span {
 }
 
 /* Custom ScrollBar */
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
@@ -37,7 +37,43 @@ span {
 ::-webkit-scrollbar-thumb {
   background: #06ab7f;
   border-radius: 12px;
-} */
+}
+
+.Vidoes {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  margin-top: 14rem ;
+  iframe {
+    max-height: 600px;
+    max-width: 600px;
+    @media (min-width: 1300px) {
+      height: 300px;
+      width: 370px;
+    }
+    @media (max-width: 715px) {
+      height: 300px;
+      width: 500px;
+    }
+    @media (max-width: 517px) {
+      height: 300px;
+      width: 400px;
+    }
+    @media (max-width: 418px) {
+      height: 230px;
+      width: 300px;
+    }
+  }
+  @media (min-width: 1131px) {
+      gap: 6rem;
+  }
+  @media (max-width: 1130px) {
+  grid-template-columns: repeat(2, auto);
+      gap: 4rem;
+  }
+  @media (max-width: 715px) {
+  grid-template-columns: repeat(1, auto);
+  }
+}
 
 .max-width-1500 {
   max-width: 1500px;

@@ -1,4 +1,3 @@
-import type { NextPage } from 'next'
 import Link from 'next/link'
 
 // Components | Buttons
@@ -7,7 +6,9 @@ import GitHubLoginBtn from '../Buttons/GitHubLogin'
 import FacebookLoginBtn from '../Buttons/FacebookLogin'
 import AppleLoginBtn from '../Buttons/AppleLogin'
 
-const Login: NextPage = () => {
+
+
+const Login = () => {
     return (
         <div className=' 
         flex
@@ -28,7 +29,9 @@ const Login: NextPage = () => {
                 "
                 action="">
 
-                <h1 className='text-5xl font-bold font-sans text-blue-900'>NightFlix</h1>
+                <h1 className='text-5xl font-bold font-sans text-blue-900'>
+                    NightFlix
+                </h1>
 
                 <input className='
                         h-12
@@ -89,6 +92,8 @@ const Login: NextPage = () => {
             </form>
         </div >
     )
+
+
 }
 
 export default Login
