@@ -3,29 +3,34 @@ import { useSession, signIn, signOut } from "next-auth/react"
 import { useRouter } from 'next/router'
 
 // Components
-import SideNavigation from '../components/Dashboard/SideNavigation'
+import Navigation from '../components/Dashboard/Navigation'
+import Search from '../components/Dashboard/Search'
 import MainPage from '../components/Dashboard/MainPage'
 import FooterNavigation from '../components/Dashboard/FooterNavigation'
 
 const dashboard: NextPage = () => {
-
     // For the session
     const { data: session } = useSession()
+
     // For redirecting the users
     const { push } = useRouter()
 
     if (session) {
-        <div className='flex'>
+        <div className=''>
 
-            <div className='block 768max:hidden'>
-                <SideNavigation />
+            <div className="hidden 1130max:block">
+                <Search />
+            </div>
+
+            <div className='block 1130max:hidden'>
+                <Navigation />
             </div>
 
             <div>
                 <MainPage />
             </div>
 
-            <div className='hidden 768max:block'>
+            <div className='hidden 1130max:block'>
                 <FooterNavigation />
             </div>
         </div>

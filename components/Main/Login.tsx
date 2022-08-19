@@ -73,10 +73,10 @@ const Login: NextPage = () => {
                 text-center 
                 m-auto 
                 ">
-                    Login
+                    Sign in
                 </button>
 
-                <Link href="/register">
+                <Link href="/Register">
                     <a className='underline text-white'>Register Here</a>
                 </Link>
 
